@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Reading Enhancer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background-color: #f0f0f0;
+      color: #333;
+      width: 300px;
+      height: 400px;
+    }
+
+    #noteInput, #taskInput {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #saveNote, #addTask {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #saveNote:hover, #addTask:hover {
+      background-color: #0056b3;
+    }
+
+    #toggleDistractionFree {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #toggleDistractionFree:hover {
+      background-color: #218838;
+    }
+
+    #taskList {
+      margin-top: 10px;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .task button {
+      background-color: #dc3545;
+      border: none;
+      color: white;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .task button:hover {
+      background-color: #c82333;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web Reading Enhancer & Task Manager</h1>
+   
+  <hr>
+  <br>
+  <h2 style="display: inline;">Notes</h2> 
+  
+  
+  <textarea name="Highlighted Notes" id="noteInput" placeholder="Enter your note here..."></textarea>
+  <button id="saveNote">Save Note</button>
+  <br>
+  
+ 
+
+
+ <div>
+  <br>
+  <h2>Tasks</h2>
+  <input type="text" id="taskInput" placeholder="Enter your task here...">
+  <button id="addTask">Add Task</button>
+  <div id="taskList"></div>
+  
+  
+ </div>
+  
+
+  
+  
+  <script src="popup.js"></script>
+</body>
+</html>
