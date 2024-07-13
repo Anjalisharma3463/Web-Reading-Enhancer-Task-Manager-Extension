@@ -1,27 +1,24 @@
- 
 {
-    "manifest_version": 2,
-    "name": "Web Reading Enhancer & Task Manager",
-    "version": "1.0",
-    "permissions": ["activeTab", "storage", "contextMenus"],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"],
-        "css": ["style.css"]
-      }
-    ],
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icons/icon1.png",
-        "48": "icons/icon2.png",
-        "128": "icons/icon3.png"
-      }
+  "manifest_version": 3,
+  "name": "Web Reading Enhancer & Task Manager",
+  "version": "1.0",
+  "permissions": ["activeTab", "storage", "contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon1.png",
+      "48": "icons/icon2.png",
+      "128": "icons/icon3.png"
     }
   }
-  
+}

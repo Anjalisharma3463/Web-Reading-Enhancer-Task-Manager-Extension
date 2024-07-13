@@ -9,6 +9,3 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     chrome.tabs.sendMessage(tab.id, { action: "readText", text: info.selectionText });
   }
 });
-
-
- 
