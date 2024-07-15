@@ -1,16 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   loadTasks();
   loadNote();
+ 
 });
 
-// Listen for messages from content script
-chrome.runtime.onMessage.addListener(function(message) {
-  if (message.action === 'setNote') {
-    const noteInput = document.getElementById('noteInput');
-    noteInput.value += (noteInput.value ? '\n' : '') + message.text;
-    saveNote();
-  }
-});
+ 
 
 document.getElementById('saveNote').addEventListener('click', () => {
   const note = document.getElementById('notes').value;
@@ -34,24 +28,17 @@ document.getElementById('saveNote').addEventListener('click', function() {
   saveNote();
 });
 
-// document.getElementById('toggleDistractionFree').addEventListener('click', function() {
-//   document.body.classList.toggle('distraction-free-mode');
-//   console.log('Toggled distraction-free mode');
-// });
-
-
-document.getElementById('toggleDistractionFree').addEventListener('click', () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { action: 'toggleDistractionFree' });
-  });
-});
-
+ 
 
 function addTask(task) {
   chrome.storage.sync.get({ tasks: [] }, function(result) {
+
+// agar koi pichla data ya task tha to hamne pehle use dikhane k liye user ko nikal liya h atask ko or data ko ..
+
+// update the new tasks array from previous tasks aray 
     const tasks = result.tasks;
-    tasks.push(task);
-    chrome.storage.sync.set({ tasks: tasks }, function() {
+    tasks.push(task); // new atask push kr diya 
+    chrome.storage.sync.set({ tasks: tasks }, function() { //yaha purane tasks array ki value new array ki values set or update kr diya
       console.log('Task saved:', task);
       displayTasks();
     });

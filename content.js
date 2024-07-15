@@ -18,21 +18,7 @@ document.addEventListener('mouseup', () => {
   }
 });
 
-
-function saveHighlight(text) {
-  chrome.storage.local.get({ highlights: [] }, (result) => {
-    const highlights = result.highlights;
-    highlights.push(text);
-    chrome.storage.local.set({ highlights });
-  });
-}
-
  
 
-function sendSelectedText(text) {
-  if (text) {
-    chrome.runtime.sendMessage({ action: 'setNote', text: text });
-  }
-}
 
- 
+// chrome.tabs.query() //Gets all tabs that have the specified properties, or all tabs if no properties are specified.

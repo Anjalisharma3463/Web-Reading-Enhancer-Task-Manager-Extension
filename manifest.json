@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Web Reading Enhancer & Task Manager",
-  "version": "1.0",
+  "version": "1.0.2",
   "permissions": ["activeTab", "storage", "contextMenus"],
   "background": {
     "service_worker": "background.js"
