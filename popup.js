@@ -33,12 +33,12 @@ document.getElementById('saveNote').addEventListener('click', function() {
 function addTask(task) {
   chrome.storage.sync.get({ tasks: [] }, function(result) {
 
-// agar koi pichla data ya task tha to hamne pehle use dikhane k liye user ko nikal liya h atask ko or data ko ..
+ 
 
-// update the new tasks array from previous tasks aray 
+ 
     const tasks = result.tasks;
-    tasks.push(task); // new atask push kr diya 
-    chrome.storage.sync.set({ tasks: tasks }, function() { //yaha purane tasks array ki value new array ki values set or update kr diya
+    tasks.push(task);  
+    chrome.storage.sync.set({ tasks: tasks }, function() {  
       console.log('Task saved:', task);
       displayTasks();
     });
