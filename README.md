@@ -21,7 +21,8 @@ To install the extension from source, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Anjalisharma3463/web-enhancer_and_task-manager.git
+   git clone  https://github.com/Anjalisharma3463/Web-Reading-Enhancer-Task-Manager-Extension.git
+ 
 
 2. Enable Developer Mode in Chrome:
 
