@@ -13,6 +13,8 @@ The Web Reading Enhancer & Task Manager is a Chrome extension designed to enhanc
 - **Task Management:** Add or remove tasks easily like a to-do list.
 - **Text Highlighting:** Automatically highlight selected text in green for easy reference.
 - **Note Taking:** Add notes to highlighted text for reminders or annotations.
+- ** Text to speech conversion:**   Select the text, right-click on it, and then choose "Read Aloud" from the context menu..
+
 
 ## Installation
 
